@@ -1,0 +1,9 @@
+Paleta sugerida
+
+Azul principal: #174B73
+Azul claro: #D6E6F1
+Amarillo: #F7B800
+Amarillo suave: #F9D97D
+Fondo: #F7F9FB
+Blanco: #FFFFFF
+Texto oscuro: #17324D

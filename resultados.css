@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f5f5f5;
+    background-image: url('Ondas\ Pastel\ sobre\ Fondo\ Blanco.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0px 25px;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 8px;
+    position: sticky;
+    top: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    max-width: 110px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.titulo {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 40vw;
+    margin-left: 20vw;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.titulo a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+    flex-grow: 1;
+    margin-right: 2vw;
+    transition: padding .2s, margin .3s, box-shadow .3s;
+}
+
+.titulo a:hover {
+    box-shadow: 0px 3px 5px rgb(255, 197, 7);
+    padding-bottom: 14px;
+    padding-top: 14px;
+    margin-bottom: 6px;
+    border-radius: 15px;
+}
+
+.main-content {
+    width: 80vw;
+    margin-top: 60px;
+    margin-left: 6vw;
+}
+
+h3 {
+    color: #F7B800;
+    font-size: 1.3em;
+}
+
+h1 {
+    font-size: 2.4rem;
+    color: #17324D;
+    margin-top: 8px;
+}
+
+.text1 {
+    margin-top: 10px;
+    color: #174B73;
+    font-size: 1.3rem;
+    max-width: 900px;
+}
+
+.respuestas {
+    width: 80vw;
+    margin: 50px auto 30px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.respuestas h2 {
+    color: #17324D;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.descripcion {
+    color: #174B73;
+    font-size: 1.1rem;
+}
+
+.contador {
+    width: 230px;
+    margin: 30px auto 0;
+    padding: 25px;
+    background: #f5f5f5;
+    border-radius: 15px;
+}
+
+.contador span {
+    display: block;
+    color: #F7B800;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.contador p {
+    color: #174B73;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.resultados {
+    width: 80vw;
+    margin: 30px auto 80px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.resultados h2 {
+    text-align: center;
+    color: #17324D;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.resultado-vacio {
+    min-height: 220px;
+    border: 2px dashed #d8d8d8;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.resultado-vacio p {
+    color: #17324D;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.resultado-vacio span {
+    color: #174B73;
+    font-size: 1rem;
+}
+
+footer {
+    background-color: #17324D;
+    min-height: 130px;
+    padding: 25px 6vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-left img {
+    width: 85px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.footer-left p {
+    font-size: 1rem;
+}
+
+footer > span {
+    font-size: 0.9rem;
+    color: #d5e0ea;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 15px;
+    }
+
+    .logo img {
+        max-width: 80px;
+    }
+
+    .titulo {
+        margin-left: 5vw;
+        width: auto;
+    }
+
+    .titulo a {
+        font-size: 0.9rem;
+        margin-right: 1vw;
+    }
+
+    .main-content {
+        width: 90vw;
+        margin-left: 5vw;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .text1 {
+        font-size: 1rem;
+    }
+
+    .respuestas {
+        width: 90vw;
+        padding: 25px 20px;
+    }
+
+    .resultados {
+        width: 90vw;
+        padding: 25px 20px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .footer-left {
+        gap: 12px;
+    }
+
+    .footer-left img {
+        width: 65px;
+    }
+
+    .footer-left p {
+        font-size: 0.75rem;
+    }
+
+    footer > span {
+        font-size: 0.7rem;
+    }
+}
