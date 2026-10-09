@@ -1,93 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="resultados.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estadísticas agregadas de la encuesta de prevención de adicciones de PROPIA e INAU.">
     <title>Resultados - Encuesta INAU</title>
+    <link rel="stylesheet" href="resultados.css">
+    <script src="resultados.js" defer></script>
 </head>
-
 <body>
-
     <header>
         <section>
-            <nav>
+            <nav aria-label="Navegación principal">
                 <div class="logo">
-                    <img src="logo_propia_transparente.png" alt="Logo de INAU">
+                    <img src="logo_propia_transparente.png" alt="Logo de PROPIA">
                 </div>
-
                 <div class="titulo">
                     <a class="menu1" href="index.html">Inicio</a>
                     <a class="menu2" href="index.html#encuesta">Encuesta</a>
-                    <a class="menu3" href="respuestas.html">Resultados</a>
+                    <a class="menu3" href="resultados.html" aria-current="page">Resultados</a>
                 </div>
             </nav>
         </section>
     </header>
 
     <main>
-
         <section class="main-content">
             <h3>RESULTADOS INAU</h3>
-
             <h1>Resultados de la encuesta</h1>
-
             <p class="text1">
-                En esta sección se mostrarán los resultados obtenidos
-                a partir de las respuestas de la encuesta.
+                Estadísticas generales de las respuestas recibidas. Los datos se actualizan automáticamente cuando Google publica los cambios de la hoja de cálculo.
             </p>
         </section>
 
-        <section class="respuestas">
-
-            <h2>Respuestas recibidas</h2>
-
-            <p class="descripcion">
-                Los resultados aparecerán aquí cuando la encuesta
-                comience a recibir respuestas.
-            </p>
-
+        <section class="respuestas" aria-labelledby="respuestas-titulo">
+            <h2 id="respuestas-titulo">Respuestas recibidas</h2>
+            <p class="descripcion">Cantidad total de respuestas registradas en la encuesta.</p>
             <div class="contador">
-                <span>0</span>
+                <span id="total-respuestas" aria-live="polite">—</span>
                 <p>respuestas recibidas</p>
             </div>
-
+            <p id="estado-actualizacion" class="estado-actualizacion" role="status">Cargando estadísticas…</p>
+            <p id="ultima-actualizacion" class="ultima-actualizacion"></p>
         </section>
 
-        <section class="resultados">
-
-            <h2>Resultados</h2>
-
-            <div class="resultado-vacio">
-                <p>
-                    Todavía no hay resultados para mostrar.
-                </p>
-
-                <span>
-                    La información aparecerá aquí cuando la encuesta
-                    esté activa.
-                </span>
+        <section class="resultados" aria-labelledby="cursos-titulo">
+            <h2 id="cursos-titulo">Respuestas por curso</h2>
+            <p class="descripcion-tabla">La tabla muestra únicamente cantidades agregadas, no las respuestas individuales.</p>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Curso</th>
+                            <th scope="col">Respuestas</th>
+                            <th scope="col">Porcentaje</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cursos-body">
+                        <tr><td colspan="3" class="mensaje-tabla">Cargando cursos…</td></tr>
+                    </tbody>
+                </table>
             </div>
-
+            <p class="nota-actualizacion">La actualización no es instantánea: Google Sheets puede tardar unos minutos en reflejar nuevas respuestas publicadas.</p>
         </section>
-
     </main>
 
     <footer>
-
         <div class="footer-left">
-            <img src="logo_propia_transparente.png" alt="Logo de INAU">
-
-            <p>
-                Instituto del Niño y Adolescente del Uruguay
-            </p>
+            <img src="logo_propia_transparente.png" alt="Logo de PROPIA">
+            <p>Instituto del Niño y Adolescente del Uruguay</p>
         </div>
-
-        <span>
-            &copy;Copyright INAU 2026
-        </span>
-
+        <span>&copy; Copyright INAU 2026</span>
     </footer>
-
 </body>
 </html>
